@@ -1,0 +1,706 @@
+
+
+.navbar .profile-img {
+    position: relative;
+}
+
+.navbar .profile-img img {
+    width: 40px;
+    margin-left: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.navbar .profile {
+    position: absolute;
+    width: 200px;
+    top: 65px;
+    right: 10%;
+    background: var(--primary-color);
+    padding: 10px;
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navbar .profile.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar .profile img {
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar .profile li {
+    display: flex;
+    padding: 5px 0;
+}
+
+.navbar .profile li a {
+    display: inline-block;
+    font-weight: 500;
+    transition: var(--transition);
+    color: #fff;
+}
+
+.navbar .profile li a:hover {
+    color: var(--danger-color);
+    padding-left: 3px;
+    text-decoration: underline;
+}
+
+
+/* --------------- User DataTable ---------------- */
+
+.user-profile>h2 {
+    margin: 0;
+    margin-top: 75px;
+}
+
+.user-icon {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    color: var(--danger-color);
+}
+
+.user-profile .table-container {
+    background: var(--color-light);
+    color: var(--color-black);
+    margin: 40px auto 0;
+}
+
+.user-profile .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.curve_chart {
+    background: var(--color-light);
+}
+
+.user-profile .table thead {
+    background: var(--primary-color);
+}
+
+.user-profile .table thead tr th {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid var(--color-black);
+}
+
+.table tbody tr td {
+    font-size: 15px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--color-black);
+}
+
+@media (max-width: 1024px) {
+    .navbar .profile {
+        right: 29.5%;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 830px) {
+    .user-profile .table thead {
+        display: none;
+    }
+    .user-profile .table,
+    .user-profile .table tbody,
+    .user-profile .table tr,
+    .user-profile .table td {
+        display: block;
+        width: 100%;
+    }
+    .user-profile .table tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .user-profile .table-container {
+        background: transparent;
+    }
+    .user-profile .table tbody tr {
+        margin-top: 30px;
+        background: var(--color-light);
+    }
+    .user-profile .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: left;
+    }
+}
+
+.user-profile .curve_chart {
+    width: 100%;
+    height: 500px;
+    background: var(--color-white);
+    margin: 0 auto;
+}
+.table button{
+    border-color: var(--danger-color);
+}
+.table button a {
+    background: var(--danger-color);
+    color: var(--color-white);
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.table button a:hover {
+    background: var(--bg-color-1);
+}
+
+
+/* ********* User Cs50 Course ********* */
+
+.user-course .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.user-course .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 75%;
+}
+
+@media (max-width: 500px) {
+    .user-course .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* >>>>>>>>>> User EXam <<<<<<<<<< */
+
+.exam-container {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.exam-container .quiz-box {
+    background: var(--primary-color);
+    width: 450px;
+    margin: auto;
+    padding: 25px 15px;
+    border-radius: 3px;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.exam-container .quiz-box .qa-set {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.exam-container .quiz-box .qa-set::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 100%;
+    height: 1px;
+    background: var(--bg-color-2);
+}
+
+.exam-container .quiz-box .qa-ans-row {
+    margin: 10px 0;
+}
+
+.exam-container .quiz-box .footer {
+    text-align: center;
+}
+
+.exam-container .quiz-box .footer input {
+    background: var(--bg-color-2);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);
+    border-color: var(--bg-color-2);
+}
+
+.exam-container .quiz-box .footer input:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 500px) {
+    .exam-container .quiz-box {
+        width: 330px;
+    }
+    .user-exam>h2 {
+        font-size: 24px;
+    }
+    .user-exam .quiz-box h4 {
+        font-size: 17px;
+    }
+}
+
+
+/* End User Exam */
+
+
+/* Start Community */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    background: var(--danger-color);
+    color: var(--color-white);
+}
+
+.community .head {
+    text-align: center;
+    margin: auto;
+}
+
+.community .head h2 {
+    text-align: center;
+    margin: 50px 0 15px;
+}
+
+.community .head .btn {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.community .head h3 {
+    position: relative;
+    margin: 15px 0;
+}
+
+.community .head h3::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    background: var(--danger-color);
+}
+
+.community .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.community .boxs .box {
+    background: var(--primary-color);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 2.5px 2.5px 15px 2.5px rgb(0, 0, 0, 0.8);
+    transition: var(--transition);
+}
+
+.community .boxs .box:hover {
+    transform: scale(1.05);
+}
+
+.community .boxs .box i {
+    color: var(--success-color);
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.community .boxs .box h5 {
+    font-size: 22px;
+    color: var(--bg-color);
+}
+
+.community .boxs .box .q-btn {
+    margin-top: 20px;
+}
+
+.community .boxs .box .q-btn a {
+    background: var(--warning-color);
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: var(--danger-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.community .box .q-btn a:hover {
+    background: var(--success-color);
+}
+
+
+/* ========== => questions pages <= ========= */
+
+.boxs.questions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.boxs.questions .box.questions {
+    padding: 10px;
+}
+
+.boxs.questions .box.questions:hover {
+    transform: scale(1.03);
+}
+
+.boxs.questions .box.questions a {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.boxs.questions .box.questions .content {
+    width: 100%;
+    text-align: right;
+}
+
+.boxs.questions .box.questions .main-icon {
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxs.questions .box.questions .main-icon i {
+    font-size: 100px;
+    color: var(--warning-color);
+}
+
+.boxs.questions .box.questions h3 {
+    color: var(--bg-color);
+    padding-top: 15px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.boxs.questions .box.questions .date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid var(--bg-color-2);
+    height: 40px;
+}
+
+.boxs.questions .box.questions .date p {
+    font-size: 12px;
+    margin-right: 5px;
+    line-height: 2;
+    color: #fff;
+}
+
+.boxs.questions .box.questions .date .time i {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.boxs.questions .box.questions .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.boxs.questions .box.questions .user .icon i {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.boxs.questions .box.questions .user h5 {
+    margin-right: 10px;
+    color: var(--color-white);
+}
+
+
+/* ========== => Single question pages <= ========= */
+
+.community.single-question .container {
+    margin-top: 50px;
+}
+
+.community.single-question img {
+    max-width: 400px;
+    margin: auto;
+}
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.community.single-question .question-box {
+    background: var(--primary-color);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 2.5px 2.5px 15px 2.5px rgb(0, 0, 0, 0.8);
+}
+
+.community.single-question .head {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid var(--bg-color);
+    padding-bottom: 10px;
+}
+
+.community.single-question .head .icon i {
+    color: var(--warning-color);
+    font-size: 50px;
+    margin-right: 20px;
+    background: var(--danger-color);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.community.single-question .content .date {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--bg-color);
+}
+
+.community.single-question .content .date p {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.community.single-question .discription>h5 {
+    text-align: center;
+    margin: 15px 0;
+    color: var(--success-color);
+}
+
+.community.single-question .discription .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--bg-color);
+    border-bottom: 1px solid var(--bg-color);
+    padding: 10px;
+    margin-top: 15px;
+    color: var(--bg-color);
+}
+
+.community.single-question .discription .user-name {
+    display: flex;
+    align-items: center;
+}
+
+.community.single-question .like:hover {
+    transition: var(--transition);
+    color: var(--danger-color);
+    cursor: pointer;
+}
+
+.community.single-question .discription .user-name h5 {
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+.community.single-question .comments {
+    margin: 15px 0;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 2.5px 2.5px 15px 2.5px rgb(0, 0, 0, 0.8);
+}
+
+.community.single-question .title {
+    padding: 10px 0;
+    font-size: 20px;
+    color: var(--bg-color);
+}
+
+.community.single-question .comments .com-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.community.single-question .user-comment {
+    display: flex;
+    align-items: center;
+}
+
+.community.single-question .user-comment .icon i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.community.single-question .user-comment .date {
+    display: flex;
+    align-items: center;
+    color: var(--bg-color);
+}
+
+.community.single-question .user-comment .date p {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.community.single-question .comments .fa-heart,
+.community.single-question .comments .fa-bookmark {
+    margin: 0 5px;
+    color: var(--bg-color-1);
+    transition: var(--transition);
+}
+
+.community.single-question .comments .fa-heart:hover,
+.community.single-question .comments .fa-bookmark:hover {
+    color: var(--danger-color);
+    cursor: pointer;
+}
+
+.community.single-question .comments .comment h6 {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.community.single-question .btn {
+    cursor: pointer;
+    padding: 7px 15px;
+}
+
+.community .head #popup {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #00bf8fba;
+    width: 450px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.5);
+    transition: var(--transition);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.community .head #popup.active {
+    visibility: visible;
+    top: 50%;
+}
+
+.community .head #popup .content h4 {
+    font-size: 20px;
+    color: var(--bg-color);
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 0;
+}
+
+.community .head #popup .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.community .head #popup .input select {
+    padding: 5px;
+}
+
+.community .head #popup .input input {
+    padding: 5px;
+    width: 100%;
+}
+
+.community .head #popup .input textarea {
+    padding: 5px;
+    width: 100%;
+    max-height: 150px;
+    resize: none;
+}
+
+.community .head #popup .submit-btn input {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: var(--danger-color);
+    width: fit-content;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.community .head #popup .submit-btn:hover input {
+    background: var(--warning-color);
+    color: var(--bg-color);
+}
+
+.community .head #popup .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 25px;
+    color: var(--bg-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.community .head #popup .close:hover {
+    color: var(--danger-color);
+}
+
+@media (max-width: 500px) {
+    .community.single-question .head .content h4 {
+        font-size: 18px;
+        font-weight: normal;
+        text-align: left;
+    }
+    .boxs.questions .box.questions .user h5 {
+        font-size: 14px;
+        font-weight: normal;
+        margin-right: 5px;
+    }
+    .community .head #popup {
+        width: 330px;
+    }
+}
+
+
+/* End Community */
+
+

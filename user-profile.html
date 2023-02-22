@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>E-Learning(user-profile)</title>
+     <meta charset="UTF-8">
+    <!-- bootstrap meta -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/x-icon">
+     <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css"> 
+   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+     <!-- style css --> 
+     <link rel="stylesheet" href="css/user-profile.css">
+     <link rel="stylesheet" href="css/contact.css">
+     <link rel="stylesheet" href="css/about.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+     <!-- start navbar -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container">
+  <a class="navbar-brand" href="index.html">E-Learning</a>
+  
+
+  <div class="collapse navbar-collapse" id="mainnav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="course.html">Course</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="profile-img" onclick="menuToggle();"> <img src="images/user-profile.png" alt=""></div>
+    <div class="profile">
+        <ul>
+            <li><img src="images/user-icon.png" alt="">
+                <a href="user-profile.html">Your Profile</a>
+            </li>
+
+            <li><img src="images/your-courses.png" alt="">
+                <a href="#your-courses">Your Courses</a>
+            </li>
+
+            <li><img src="images/your-exams.png" alt="">
+                <a href="user-exams.html">Your Exams</a>
+            </li>
+
+            <li><img src="images/community-icon.png" alt="">
+                <a href="community.html">Community</a>
+            </li>
+
+            <li><img src="images/logout.png" alt="">
+                <a href="login.html">Log Out</a>
+            </li>
+        </ul>
+    </div>
+  <i id="icon" class="fa fa-moon-o fa-2x"></i>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</div>
+ 
+</nav>
+
+<!-- end navbar -->
+
+<!-- start user profile -->
+<section class="user-profile container">
+ <h2 class="text-center">User Data</h2>
+  <div class="user-icon"> <i class="fa fa-user"></i></div>
+   <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+         <th>User ID</th>
+         <th>User Name</th>
+         <th>phone No.</th>
+         <th>E-Mail</th>
+         <th>City</th>
+         <th>Purchased Courses</th>
+         <th>videos viewed</th>
+         <th>Crceation Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+         <td data-label="User ID">1</td>
+         <td data-label="User Name">John Doe</td>
+         <td data-label="phone No.">0123456789</td>
+        <td data-label="E-Mail">user@mail.com</td>
+        <td data-label="City">Cairo</td>
+        <td data-label="Purchased Courses">6</td>
+        <td data-label="videos viewed">113</td>
+        <td data-label="Crceation Date">25 jan 2022</td>
+       </tr>
+     </tbody>
+    </table>
+
+</div>
+
+
+
+  <h2 class="text-center">Exam Stats</h2>
+  <div class="user-icon"> <i class="fa fa-signal"></i></div>
+
+  <div id="curve_chart" class="curve_chart"></div>
+
+
+
+  <h2 class="text-center">Your Courses</h2>
+  <div class="user-icon"><i class="fa fa-cc-discover"></i></div>
+
+  <div class="table-container" id="your-courses">
+
+    <table class="table">
+      <thead>
+        <tr>
+         <th>Course Name</th>
+         <th>Subscription date</th>
+         <th>No. Of Videos</th>
+         <th>Watched</th>
+         <th>All Exams</th>
+         <th>Finished Exams</th>
+         <th>Open</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+       <tr>
+        <td data-label="Course Name ">CS50 Full Course</td>
+         <td data-label="Subscription date ">12 Feb. 2022</td>
+         <td data-label="No. Of Videos ">37</td>
+         <td data-label="Watched ">13</td>
+         <td data-label="All Exams ">10</td>
+         <td data-label="Finished Exams ">3</td>
+         <td data-label="Open ">
+         <button>
+         <a href="user-CS50.html">Browse</a>
+         </button>
+         </td>
+        </tr>
+
+        <tr>
+         <td data-label="Course Name ">Data Analysis Course</td>
+        <td data-label="Subscription date ">19 Apr. 2022</td>
+        <td data-label="No. Of Videos ">87</td>
+        <td data-label="Watched ">28</td>
+        <td data-label="All Exams ">22</td>
+        <td data-label="Finished Exams ">4</td>
+        <td data-label="Open ">
+         <button><a href="user-data-analysis.html">Browse</a></button>
+        </td>
+       </tr>          
+
+        <tr>
+         <td data-label="Course Name ">Data Scientist Course</td>
+         <td data-label="Subscription date ">3 Jun. 2022</td>
+         <td data-label="No. Of Videos ">112</td>
+         <td data-label="Watched ">17</td>
+         <td data-label="All Exams ">26</td>
+         <td data-label="Finished Exams ">8</td>
+         <td data-label="Open ">
+          <button><a href="user-data-scientist.html">Browse</a></button>
+        </td>
+        </tr>         
+     </tbody>
+    </table>
+
+  </div>
+
+</section>
+
+
+
+<!-- end user profile -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start footer -->
+ <footer style="margin-top:5rem;">
+    <div class="container">
+     <div class="row footer">
+      <div class="footer1 col-lg-3 col-sm-6 col-md-3 ">
+        <a href="index.html" class="footer-logo">
+            <h4>E-Learning</h4>
+        </a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, vitae ipsam reiciendis explicabo deserunt quo!</p>
+    </div>
+  
+      <div class="col-lg-3 col-sm-6 col-md-3 footer2"> 
+        <h4>Permalinks</h4>
+        <ul class="permalinks">
+          <li>
+              <a href="index.html">Home</a>
+          </li>
+          <li>
+              <a href="about.html">About</a>
+          </li>
+          <li>
+              <a href="course.html">Courses</a>
+          </li>
+          <li>
+              <a href="contact.html">Contact</a>
+          </li>
+      </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-3  footer3">
+        <h4>Privacy</h4>
+        <ul class="privacy">
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Terms And Conditios</a>
+            </li>
+            <li>
+                <a href="#">Refund Policy</a>
+            </li>
+        </ul> </div>
+      <div class="col-lg-3 col-sm-6 col-md-3 footer4">  
+         <h4>Contact Us</h4>
+        <div>
+            <p>+01 234 567 8910</p>
+            <p>Admin@info.com</p>
+        </div>
+        <ul class="footer-social">
+            <li>
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+      </div>
+      
+     </div>
+    </div>
+  <div class=" copyright">
+     <small>All Rights Reversed &copy; E-Learning 2022 </small>
+    </div>
+  </footer>  
+  <!-- end footer -->
+  
+  
+  
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- jequery -->
+     <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap js -->
+     <script src="js/bootstrap.min.js"></script>
+    <!-- my java script -->
+     <script src="js/myjs.js"></script>
+     <script>
+        // =====> profile toggle Menu <===== //
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.profile');
+            toggleMenu.classList.toggle('active')
+
+        }
+    </script>
+    <script>
+      // =====> Dark & Light Mood <===== //
+       const icon = document.getElementById("icon");
+       const bodyEl = document.querySelector("body");
+    
+        const lightMood = () => {
+           bodyEl.classList.toggle("light-theme");
+        };
+    
+        icon.addEventListener("click", () => {
+          setLightMood = localStorage.getItem("light");
+    
+            if (setLightMood !== "on") {
+              lightMood();
+    
+                setLightMood = localStorage.setItem("light", "on");
+             } else {
+               lightMood();
+    
+                setLightMood = localStorage.setItem("light", null);
+             }
+           });
+    
+          let setLightMood = localStorage.getItem("light");
+    
+          if (setLightMood === "on") {
+            lightMood();
+        }
+    </script>
+     <!-- // =====> User Profile page & Chart Data Table <===== // -->
+     <script type="text/javascript " src="https://www.gstatic.com/charts/loader.js "></script>
+     <script type="text/javascript ">
+         google.charts.load('current', {
+             'packages': ['corechart']
+         });
+         google.charts.setOnLoadCallback(drawChart);
+ 
+         function drawChart() {
+             var data = google.visualization.arrayToDataTable([
+                 ['Year', 'Finished', 'Not Finished'],
+                 ['Jan', 0, 100],
+                 ['Feb', 0, 100],
+                 ['Mar', 0, 100],
+                 ['Apr', 0, 100],
+                 ['May', 0, 100],
+                 ['Jun', 0, 100],
+                 ['Jul', 0, 100],
+                 ['Aug', 0, 100],
+                 ['Oct', 0, 100],
+                 ['Nov', 0, 100],
+                 ['Dec', 0, 100]
+ 
+             ]);
+ 
+             var options = {
+                 maintainAspectRatio: false,
+                 title: 'User Exams Stats',
+                 curveType: 'function',
+                 legend: {
+                     position: 'bottom'
+                 }
+             };
+ 
+             var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+ 
+             chart.draw(data, options);
+         }
+     </script>
+   </body>
+  </html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>E-Learning(login)</title>
+     <meta charset="UTF-8">
+    <!-- bootstrap meta -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/x-icon">
+     <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css"> 
+   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+     <!-- style css --> 
+     <link rel="stylesheet" href="css/contact.css">
+     <link rel="stylesheet" href="css/about.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+     <!-- start navbar -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container">
+  <a class="navbar-brand" href="index.html">E-Learning</a>
+  
+
+  <div class="collapse navbar-collapse" id="mainnav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="course.html">Course</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link lastlink" href="login.html">Login</a>
+      </li>
+    </ul>
+   
+  </div>
+  <i id="icon" class="fa fa-moon-o fa-2x"></i>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</div>
+ 
+</nav>
+
+<!-- end navbar -->
+
+<!-- Start Login Form -->
+
+<section class="login-signup-body container">
+
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="#" class="sign-in-form">
+                <h2 class="title">Sign In</h2>
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="User Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <a class="btn solid" href="user-profile.html">Login</a>
+                <p class="social-text">Or Sign In With Socials Platforms</p>
+
+                <div class="social-media">
+                    <a href="https://ar-ar.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/signup" class="social-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/home" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </form>
+
+
+            <form action="#" class="sign-up-form">
+                <h2 class="title">Sign Up</h2>
+
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="User Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="First Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Last Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-phone"></i>
+                    <input type="tel" placeholder="Phone Number ">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-phone"></i>
+                    <input type="tel" placeholder="Father's Number">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-globe"></i>
+                    <input type="text" placeholder="Country">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email Address">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <input type="submit" value="Sign Up" class="btn solid">
+                <p class="social-text">Or Sign Up With Socials Platforms</p>
+
+                <div class="social-media">
+                    <a href="https://ar-ar.facebook.com/" class="social-icon"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/signup" class="social-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/home" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New Here ?</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quidem?</p>
+                <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+            </div>
+            <img src="images/login.png" class="image" alt="">
+        </div>
+
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>One OF Us?</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus impedit</p>
+                <button class="btn transparent" id="sign-in-btn">Sign In</button>
+            </div>
+            <img src="images/sign.svg" class="image" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+<!-- End Login Form -->
+
+
+<!-- start footer -->
+<footer>
+    <div class="container">
+     <div class="row footer">
+      <div class="footer1 col-lg-3 col-sm-6 col-md-3 ">
+        <a href="index.html" class="footer-logo">
+            <h4>E-Learning</h4>
+        </a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, vitae ipsam reiciendis explicabo deserunt quo!</p>
+    </div>
+  
+      <div class="col-lg-3 col-sm-6 col-md-3 footer2"> 
+        <h4>Permalinks</h4>
+        <ul class="permalinks">
+          <li>
+              <a href="index.html">Home</a>
+          </li>
+          <li>
+              <a href="about.html">About</a>
+          </li>
+          <li>
+              <a href="course.html">Courses</a>
+          </li>
+          <li>
+              <a href="contact.html">Contact</a>
+          </li>
+      </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-3  footer3">
+        <h4>Privacy</h4>
+        <ul class="privacy">
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Terms And Conditios</a>
+            </li>
+            <li>
+                <a href="#">Refund Policy</a>
+            </li>
+        </ul> </div>
+      <div class="col-lg-3 col-sm-6 col-md-3 footer4">  
+         <h4>Contact Us</h4>
+        <div>
+            <p>+01 234 567 8910</p>
+            <p>Admin@info.com</p>
+        </div>
+        <ul class="footer-social">
+            <li>
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+      </div>
+      
+     </div>
+    </div>
+  <div class=" copyright">
+     <small>All Rights Reversed &copy; E-Learning 2022 </small>
+    </div>
+  </footer> 
+  <!-- end footer -->
+  
+  
+  
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- jequery -->
+     <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap js -->
+     <script src="js/bootstrap.min.js"></script>
+    <!-- my java script -->
+     <script src="js/myjs.js"></script>
+     <script>
+        // =====> Log In & Sign Up  <===== //
+
+        const signInBtn = document.querySelector("#sign-in-btn");
+        const signUpBtn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".login-signup-body");
+
+        signUpBtn.addEventListener("click", () => {
+            container.classList.add("sign-up-mode");
+        });
+
+        signInBtn.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode");
+        });
+    </script>
+    <script>
+      // =====> Dark & Light Mood <===== //
+       const icon = document.getElementById("icon");
+       const bodyEl = document.querySelector("body");
+    
+        const lightMood = () => {
+           bodyEl.classList.toggle("light-theme");
+        };
+    
+        icon.addEventListener("click", () => {
+          setLightMood = localStorage.getItem("light");
+    
+            if (setLightMood !== "on") {
+              lightMood();
+    
+                setLightMood = localStorage.setItem("light", "on");
+             } else {
+               lightMood();
+    
+                setLightMood = localStorage.setItem("light", null);
+             }
+           });
+    
+          let setLightMood = localStorage.getItem("light");
+    
+          if (setLightMood === "on") {
+            lightMood();
+        }
+    </script>
+   </body>
+  </html>
